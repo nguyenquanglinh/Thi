@@ -1,0 +1,74 @@
+﻿@model IEnumerable<DBStore.DAO.DoAn>
+
+<p>
+    @if (ViewBag.Session != null)
+    {
+        <a asp-action="Create">Create New</a>
+    }
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.MaDoAn)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MaSV)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TenDoAN)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MoTa)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MaGVHD)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FileWordPdf)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FileSourceCode)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MaDoAn)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MaSV)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.TenDoAN)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MoTa)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.MaGVHD)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FileWordPdf)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FileSourceCode)
+                </td>
+                <td>
+
+                    @if (ViewBag.Session != null)
+                    {
+                        @Html.ActionLink("Edit", "Edit", new { id = item.MaDoAn })
+                        @Html.ActionLink("Details", "Details", new { id = item.MaDoAn })
+                        @Html.ActionLink("Delete", "Delete", new { id = item.MaDoAn });
+                    }
+
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

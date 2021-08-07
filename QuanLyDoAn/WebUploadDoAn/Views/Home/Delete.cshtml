@@ -1,0 +1,59 @@
+﻿@model DBStore.DAO.DoAn
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>DoAn</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.MaDoAn)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.MaDoAn)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.MaSV)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.MaSV)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TenDoAN)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TenDoAN)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.MoTa)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.MoTa)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.MaGVHD)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.MaGVHD)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.FileWordPdf)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FileWordPdf)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.FileSourceCode)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.FileSourceCode)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input id="MaDoAn" name="MaDoAn" value="@ViewBag.maDoAn" hidden />
+        <input id="FileWordPdf" name="FileWordPdf" value="@ViewBag.FileWordPdf" hidden />
+        <input id="FileSourceCode" name="FileSourceCode" value="@ViewBag.FileSourceCode" hidden />
+        <input type="submit" value="Delete" class="btn btn-danger" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>

@@ -1,0 +1,9 @@
+ma tran a
+                   1	                   2	
+                   1	                   2	
+ma tran b
+                   1	                   2	                   3	
+                   1	                   2	                   3	
+ma tran tich
+                   3	                   6	                   9	
+                   3	                   6	                   9	
